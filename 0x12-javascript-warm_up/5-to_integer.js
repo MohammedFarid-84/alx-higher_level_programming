@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-function conInt() {
+function conInt () {
   const args = process.argv[2];
   const num = parseInt(args);
-  
+
   if (!isNaN(num)) {
     console.log(num);
   } else {
