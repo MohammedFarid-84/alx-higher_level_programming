@@ -4,7 +4,7 @@ const args = process.argv.slice(2);
 let x = 0;
 
 args.forEach((val, index) => {
-  if (val !== null) {
+  if (val !== null && x < 1) {
     console.log(`${val}`);
     x += 1;
   }
