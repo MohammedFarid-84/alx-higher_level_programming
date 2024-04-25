@@ -9,8 +9,12 @@ args.forEach((element) => {
   if (element > big) {
     big = element;
   }
+});
+args.forEach((element) => {
+  element = parseInt(element);
   if (element > bigs && element < big) {
     bigs = element;
   }
+  // console.log('first: ' + big, 'second: ' + bigs);
 });
 console.log(bigs);
