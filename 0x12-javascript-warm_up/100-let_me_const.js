@@ -1,2 +1,3 @@
 #!/usr/bin/node
-module.exports.myVal = 333;
+var myVal = 333;
+module.exports.myVal;
