@@ -1,10 +1,13 @@
 #!/usr/bin/node
 
-const num = parseInt(process.argv[2]);
-let i = 1;
-let fact = 1;
-
-for (i = 1; i <= num; i++) {
-  fact *= i;
+let num = parseInt(process.argv[2]);
+let x = 0;
+function calcFact (no) {
+  if (isNaN(no) || no === 0 || no === 1) {
+    return 1;
+  } else {
+    return (no * calcFact(no - 1));
+  }
 }
-console.log(fact);
+x = calcFact(num);
+console.log(x);
