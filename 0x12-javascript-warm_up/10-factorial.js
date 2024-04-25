@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
-let num = parseInt(process.argv[2]);
-let x = 0;
+const num = parseInt(process.argv[2]);
 function calcFact (no) {
   if (isNaN(no) || no === 0 || no === 1) {
     return 1;
@@ -9,5 +8,4 @@ function calcFact (no) {
     return (no * calcFact(no - 1));
   }
 }
-x = calcFact(num);
-console.log(x);
+console.log(calcFact(num));
