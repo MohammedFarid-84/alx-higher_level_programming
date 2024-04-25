@@ -7,8 +7,10 @@ const args = process.argv.slice(2);
 args.forEach((element) => {
   element = parseInt(element);
   if (element > big) {
-    bigs = big;
     big = element;
+  }
+  if (element > bigs && element < big) {
+    bigs = element;
   }
 });
 console.log(bigs);
