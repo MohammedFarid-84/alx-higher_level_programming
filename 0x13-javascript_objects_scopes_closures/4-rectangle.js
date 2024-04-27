@@ -9,13 +9,10 @@ class Rectangle {
   }
 
   print () {
-    let x = 'X';
+    const x = 'X';
     if (this.width > 0 && this.height > 0) {
-      for (let i = 1; i < this.width; i++) {
-        x = x + 'X';
-      }
       for (let i = 0; i < this.height; i++) {
-        console.log(x);
+        console.log(x.repeat(this.width));
       }
     }
   }
