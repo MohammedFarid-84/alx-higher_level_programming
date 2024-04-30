@@ -3,17 +3,12 @@ const filesAry = process.argv[2];
 const fs = require('fs');
 
 if (filesAry !== undefined) {
-  for (let i = 2; i < 4; i++) {
-    const fileName = process.argv[i];
-    const data = fs.readFileSync(fileName, 'UTF-8');
+  const file1 = process.argv[2];
+  const file2 = process.argv[3];
+  const file3 = process.argv[4];
+  const data1 = fs.readFileSync(file1, 'utf8');
+  const data2 = fs.readFileSync(file2, 'utf8');
 
-    if (data.charCodeAt(0) === 0xFEFF) {
-      data = data.substr(1);
-    }
-    if (i < 3) {
-      fs.writeFileSync(process.argv[4], data);
-    } else {
-      fs.appendFileSync(process.argv[4], data);
-    }
-  }
+  fs.writeFileSync(file3, data1);
+  fs.appendFileSync(file3, data2);
 }
