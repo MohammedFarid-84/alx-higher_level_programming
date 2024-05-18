@@ -10,9 +10,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *d = list, *s = list, *f = list;
 
-	if (!d->next)
-		return (0);
-	if(!f->next->next)
+	if (!d || !d->next)
 		return (0);
 
 	while (d && s && f)
