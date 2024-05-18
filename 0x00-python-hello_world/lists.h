@@ -16,11 +16,17 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+/* nessesry library */
+#include  <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 /* prototype function */
 size_t print_listint(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
-void free_listint(listint_t **head);
+void free_listint(listint_t *head);
 int check_cycle(listint_t *list);
+
 
 #endif /* LISTINT_H */
