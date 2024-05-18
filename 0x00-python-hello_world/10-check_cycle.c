@@ -10,8 +10,15 @@ int check_cycle(listint_t *list)
 {
 	listint_t *d = list, *s = list, *f = list;
 
-	while (d != NULL && s != NULL && f != NULL)
+	if (!d->next)
+		return (0);
+	if(!f->next->next)
+		return (0);
+
+	while (d && s && f)
 	{
+		if (!s || !f->next)
+			return (0);
 		s = s->next;
 		f = f->next->next;
 
