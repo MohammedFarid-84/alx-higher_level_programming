@@ -11,12 +11,19 @@ listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *d = *head, *new_nod = malloc(sizeof(listint_t)), *old_nod = NULL;
 
-	if (d == NULL || new_nod == NULL)
+	if (new_nod == NULL)
 		return (NULL);
+
+	if (d == NULL)
+	{
+		new_nod->n = number;
+		new_nod->next = NULL;
+		*head = new_nod;
+	}
 
 	while (d && d->next)
 	{
-		if (d->next->n - d->n != 1)
+		if (d->next->n > number)
 		{
 			old_nod = d->next;
 			new_nod->n = number;
