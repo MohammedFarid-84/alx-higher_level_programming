@@ -11,8 +11,9 @@ elif x == 0:
 else:
     y = 's:'
 
-print(f'{x} argument{y}')
+if __name__ == "__main__":
+    print(f'{x} argument{y}')
 
-if x > 0:
-    for n in range(1, len(argv)):
-        print(f'{n}: {argv[n]}')
+    if x > 0:
+        for n in range(1, len(argv)):
+            print(f'{n}: {argv[n]}')
