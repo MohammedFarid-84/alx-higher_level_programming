@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
 
+
 def add_num(*args):
     # define variables:
     total = [0] * (len(max(args, key=len)) + 1)
@@ -33,7 +34,7 @@ def add_num(*args):
                 carry = 1
             else:
                 carry = 0
-        
+
         # remove additional zeros:
         while len(total) > 1 and total[0] == 0:
             total.pop(0)
@@ -44,19 +45,17 @@ def add_num(*args):
         # remove additional zeros:
         while len(total) > 1 and total[0] == 0:
             total.pop(0)
-        
-         # extract numbers from list as string    
-        result = ''.join(map(str, total))   
 
+        # extract numbers from list as string
+        result = ''.join(map(str, total))
 
     # return the function:
     return result
 
 
 if __name__ == "__main__":
-
     try:
         reslt = add_num(*argv[1:])
         print(reslt)
-    except:
+    except Exception as e:
         print(0)
