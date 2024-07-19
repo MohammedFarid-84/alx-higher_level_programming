@@ -7,3 +7,6 @@ print("Max: {}".format(max_value))
 my_list1 = []
 max_value1 = max_integer(my_list1)
 print("Max: {}".format(max_value1))
+my_list2 = [-1, -2, -3, -4]
+max_value2 = max_integer(my_list2)
+print("Max: {}".format(max_value2))
