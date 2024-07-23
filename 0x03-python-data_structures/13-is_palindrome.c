@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	h = *head;
 
 	/* intilize the array */
-	my_arry = malloc((s - 1) * sizeof(int));
+	my_arry = malloc(s * sizeof(int) - 12);
 
 	/* save the list in the array */
 	while (h != NULL)
