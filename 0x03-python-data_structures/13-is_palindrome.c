@@ -33,7 +33,7 @@ int is_palindrome(listint_t **head)
 	h = *head;
 	i = 0;
 	/* commpare values in the array and free array */
-	while (h != NULL)
+	while (i < s / 2)
 	{
 		if (my_arry[i] != my_arry[s - 1 - i])
 		{
