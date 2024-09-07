@@ -6,7 +6,7 @@ def uniq_add(my_list=[]):
     for x in my_list:
         if x not in lst:
             lst.append(x)
-    
+
     for x in lst:
         resulte += x
 
